@@ -1,13 +1,13 @@
 // Stack(Primitive)  &  Heap(Non-Primitive)
 
-let myYoutubeName = "hiteshchaudharydotcom";
+ let myYoutubeName = "hiteshchaudharydotcom";
 
-let anotherName = myYoutubeName;
+ let anotherName = myYoutubeName;
 
-anotherName = "chaiaurcode";
+ anotherName = "chaiaurcode";
 
-console.log(myYoutubeName);
-console.log(anotherName);
+ console.log(myYoutubeName);
+ console.log(anotherName);
 
 
 let userOne = {
@@ -17,7 +17,7 @@ let userOne = {
 
 let userTwo = userOne;
 
-userTwo.email = "hitesh@gmail.com";
+ userTwo.email = "hitesh@gmail.com";
 
-console.log(userOne.email);
-console.log(userTwo.email);
+// console.log(userOne.email);
+// console.log(userTwo.email);
