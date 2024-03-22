@@ -65,24 +65,15 @@ function displayMessage(message){
    lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
-function endGame() {
+function endGame(){
   userInput.value = '';
   userInput.setAttribute('disabled', '');
-  p.classList.add('button');
-  p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+  p.classlist.add('button');
+  p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
   startOver.appendChild(p);
   playGame = false;
   newGame();
 }
-// function endGame(){
-//   userInput.value = '';
-//   userInput.setAttribute('disabled', '');
-//   p.classlist.add('button');
-//   p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
-//   startOver.appendChild(p);
-//   playGame = false;
-//   newGame();
-// }
 
 function newGame(){
   const newGamebutton = document.querySelector('#newGame');
