@@ -12,7 +12,7 @@ const JsUser = {
     [mySym] : "mykey",
     age : 18,
     location : "Ahmedabad",
-    email : "sanu5584@gmail.com",
+    email : "s@gmail.com",
     isLoggedIn : false,
     lastLogInDays : ["Monday","Saturday"]
 }; 
@@ -23,9 +23,9 @@ console.log(JsUser["full name"]);
 // console.log(JsUser.full name); // shows error which is why above square bracket method is imp
 console.log(JsUser[mySym]);
 
-JsUser.email = "Sanu5584@chatgpt.com";
+JsUser.email = "S@chatgpt.com";
 // Object.freeze(JsUser);
-JsUser.email = "Sanu5584@icrosoft.com";
+JsUser.email = "S@microsoft.com";
 console.log(JsUser);
 
 JsUser.greeting = function(){
