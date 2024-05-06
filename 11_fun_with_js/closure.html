@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>React</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <p>The bind() method of Function instances creates a new function that, when called, <br>
+        calls this function with its this keyword set to the provided value, and a given sequence <br>
+         of arguments preceding any provided when the new function is called.</p>
+    
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind" target="_blank"><h2>To learn more about bind , see documentation of mdn</h2></a>
+        <br>
+        <br>
+        <br>
+    <button>button clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+            
+            // requirement
+
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handleClick.bind(this))
+        }
+            handleClick(){
+                console.log("button clicked");
+                console.log(this.server);
+                console.log(this);
+            }
+        
+    }
+
+    const app = new React();
+
+    /*
+    Certainly! Let's break down the provided code snippet step by step and explain each line in detail:
+
+1. **HTML Structure:**
+    - The HTML structure consists of a `<button>` element within the `<body>`.
+    - The button has the text "button clicked" as its content.
+
+2. **JavaScript (React) Code:**
+    - The JavaScript code defines a `React` class with the following properties and methods:
+
+    ```javascript
+    class React {
+        constructor() {
+            this.library = "React";
+            this.server = "https://localhost:300";
+
+            // Event listener setup
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this));
+        }
+
+        handleClick() {
+            console.log("button clicked");
+            console.log(this.server);
+            console.log(this);
+        }
+    }
+
+    const app = new React();
+    ```
+
+3. **Class Initialization (`constructor`):**
+    - The `constructor` method is called when an instance of the `React` class is created (in this case, `app`).
+    - Inside the constructor:
+        - `this.library` is set to the string `"React"`.
+        - `this.server` is set to the URL `"https://localhost:300"`.
+
+4. **Event Listener Setup:**
+    - The `document.querySelector('button')` selects the first `<button>` element in the DOM.
+    - The `addEventListener` method is used to attach an event listener to the button.
+    - When the button is clicked, the `handleClick` method will be called.
+    - The `.bind(this)` ensures that within the `handleClick` method, `this` refers to the current instance of the `React` class (i.e., `app`).
+
+5. **`handleClick` Method:**
+    - The `handleClick` method is called when the button is clicked.
+    - It logs three messages to the console:
+        - `"button clicked"`: Indicates that the button was clicked.
+        - `this.server`: Logs the value of `this.server` (which is `"https://localhost:300"`).
+        - `this`: Logs the entire context of the current instance of the `React` class.
+
+6. **Purpose of `.bind(this)`:**
+    - The `.bind(this)` ensures that when the button is clicked, the `handleClick` method is executed with the correct `this` context (i.e., the `React` instance).
+    - Without `.bind(this)`, the context would be the button element itself, which is not what we want.
+
+7. **Alternative Approach (Arrow Function):**
+    - Instead of using `.bind(this)`, you can achieve the same result using an arrow function directly in the event listener:
+        ```javascript
+        document.querySelector('button').addEventListener('click', () => {
+            console.log("button clicked");
+            console.log(this.server); // Now `this` refers to the `React` instance
+        });
+        ```
+
+Remember that the choice between `.bind(this)` and arrow functions depends on your preference and the specific use case. Both approaches ensure the correct `this` context within event handlers. Happy coding! 🚀¹²³⁴⁵
+
+
+    */
+</script>
+</html>
+
+
